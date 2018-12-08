@@ -453,3 +453,11 @@ Any types of contribution are welcome. Thanks.
 ### License 许可证
 
 Jekyll-Theme-H2O is licensed under [MIT](https://github.com/kaeyleo/jekyll-theme-H2O/blob/master/LICENSE).
+
+<!--
+Gitment comments
+Client ID
+6cdb7f1d57d5cf6b0354
+Client Secret
+b4ff1ed43f3e9a1b32c6223e91542df939b16b5f
+-->

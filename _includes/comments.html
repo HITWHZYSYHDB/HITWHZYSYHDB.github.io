@@ -1,0 +1,35 @@
+<section class="post-comments">
+
+<div id="container"></div>
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+<script>
+
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "zh-CN"
+    container.className = 'gitment-container gitment-root-container'
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+}
+
+var gitment = new Gitment({
+  id: '{{ page.date }}', // 可选。默认为 location.href  Gitment https://imsun.net/posts/gitment-introduction/
+  owner: 'HITWHZYSYHDB',
+  repo: 'HDBComments',
+  theme: myTheme,
+  oauth: {
+    client_id: '6cdb7f1d57d5cf6b0354',
+    client_secret: 'b4ff1ed43f3e9a1b32c6223e91542df939b16b5f',
+  },
+})
+gitment.render('container')
+</script>
+
+
+</section>

@@ -78,3 +78,12 @@ permalink: /:year/:month/:day/:title.html
 
 # Plugins
 plugins: [jekyll-paginate]
+
+# Gitment
+# Introduction: https://imsun.net/posts/gitment-introduction/
+# Gitment
+# Introduction: https://imsun.net/posts/gitment-introduction/
+
+comment_gitment_repo: https://github.com/HITWHZYSYHDB/HDBComments
+comment_gitment_clientId: 6cdb7f1d57d5cf6b0354
+comment_gitment_clientSecret: b4ff1ed43f3e9a1b32c6223e91542df939b16b5f
