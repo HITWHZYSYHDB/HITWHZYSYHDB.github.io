@@ -31,7 +31,6 @@ jQuery(document).ready(function($) {
 });
 
 jQuery(document).ready(function($) {
-	alert(window.location.href);
     if (window.location.href=="https://hitwhzysyhdb.github.io/") { //如果是主页
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
