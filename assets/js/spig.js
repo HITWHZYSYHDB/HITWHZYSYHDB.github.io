@@ -309,19 +309,19 @@ jQuery(document).ready(function($) {
                 }
                 weather.s = true;
                 weather.c = Array();
-                weather.c[0] = "今天是" + data.result[0].days + "，" + data.result[0].week;
-                weather.c[1] = data.result[0].citynm + "今天" + data.result[0].temp_high + "°C到" + data.result[0].temp_low + "°C";
-                weather.c[2] = data.result[0].citynm + "今天" + data.result[0].weather;
-                weather.c[3] = data.result[0].citynm + "今天" + data.result[0].winp + "，" + data.result[0].wind;
-                weather.c[4] = data.result[0].citynm + "明天" + data.result[1].temp_high + "°C到" + data.result[1].temp_low + "°C";
-                weather.c[5] = data.result[0].citynm + "明天" + data.result[1].weather;
-                weather.c[6] = data.result[0].citynm + "后天" + data.result[2].temp_high + "°C到" + data.result[2].temp_low + "°C";
-                weather.c[7] = data.result[0].citynm + "后天" + data.result[2].weather;
+                weather.c[0] = "现在是" + data.result[0].time ;
+                weather.c[1] = data.result[0].city + "今天" + data.result[0].temp + "°C";
+                weather.c[2] = data.result[0].city + "今天" + data.result[0].WD;
+                weather.c[3] = data.result[0].city + "今天" + data.result[0].temp + "，" + data.result[0].WD;
+                weather.c[4] = data.result[0].city + "明天" + "NO";
+                weather.c[5] = data.result[0].city + "明天" + "NO";
+                weather.c[6] = data.result[0].city + "后天" + "NO";
+                weather.c[7] = data.result[0].city + "后天" + "NO";
                 setCookie("wea_tstamp", weather.d, 1);
                 setCookie("weather", encodeURI(weather.c.join(",")), 1);
             },
             type: "GET",
-            url: "https://myhloliapi.sinaapp.com/weather/?callback=?"
+            url: "http://www.weather.com.cn/data/sk/101121301.html"
         });
     } else {
         weather.s = true;

@@ -15,7 +15,7 @@ setTimeout("getkoto()",1000);
             function getkoto(){ 
                 var hjs = document.createElement('script'); 
                 hjs.setAttribute('id', 'hjs'); 
-                hjs.setAttribute('src', 'https://api.lwl12.com/hitokoto/main/get?encode=json'); 
+                hjs.setAttribute('src', 'https://api.lwl12.com/hitokoto/v1?encode=json'); 
                 document.getElementById("hjsbox").appendChild(hjs); 
                 t=setTimeout("getkoto()",2000); 
             } 
