@@ -121,3 +121,39 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
+.spig {
+	display: block;
+	width: 130px;
+	height: 170px;
+	position: absolute;
+	bottom: 300px;
+	left: 160px;
+	z-index: 9999;
+}
+#message {
+	line-height:170%;
+	color: #191919;
+	border: 1px solid #c4c4c4;
+	background: #ddd;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	min-height: 1em;
+	padding: 5px;
+	top: -45px;
+	position: absolute;
+	text-align: center;
+	width: auto !important;
+	z-index: 10000;
+	-moz-box-shadow: 0 0 15px #eeeeee;
+	-webkit-box-shadow: 0 0 15px #eeeeee;
+	border-color: #eeeeee;
+	box-shadow: 0 0 15px #eeeeee;
+	outline: none;
+}
+.mumu {
+	width: 130px;
+	height: 170px;
+	cursor: move;
+	background: url(“https://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=%E4%B8%9C%E4%BA%91%E5%90%8D%E4%B9%83&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&hd=undefined&latest=undefined&copyright=undefined&cs=1537302764,2425334090&os=4021939995,4098822107&simid=3542430799,585123033&pn=51&rn=1&di=42731761270&ln=355&fr=&fmq=1544244568324_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=0&hs=2&objurl=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201504%2F01%2F20150401112918_Ph5c5.jpeg&rpstart=0&rpnum=0&selected_tags=0&adpicid=0”) no-repeat;
+} 

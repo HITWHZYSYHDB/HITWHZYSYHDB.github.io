@@ -1,4 +1,32 @@
 <footer class="g-footer">
+<!--body act man-->
+    <script type="text/javascript" src="../asserts/js/spig.js" charset="gb2312"></script> 
+    <div id="spig" class="spig">
+        <div id="message">加载中……</div> 
+        <div id="mumu" class="mumu"></div> 
+    </div> 
+    <!--.end spig--> 
+    <span class="hitokoto" id="hitokoto" style="display:none">Loading...</span> 
+       <div id="hjsbox" style="display:none"> 
+        </div> 
+<script>
+setTimeout("getkoto()",1000); 
+            var t; 
+            function getkoto(){ 
+                var hjs = document.createElement('script'); 
+                hjs.setAttribute('id', 'hjs'); 
+                hjs.setAttribute('src', 'https://api.lwl12.com/hitokoto/main/get?encode=json'); 
+                document.getElementById("hjsbox").appendChild(hjs); 
+                t=setTimeout("getkoto()",2000); 
+            } 
+            function echokoto(result){ 
+                var hc = eval(result); 
+                //$("#hitokoto").fadeTo(300,0); 
+                document.getElementById("hitokoto").innerHTML = hc.hitokoto; 
+                //$("#hitokoto").fadeTo(300,0.75); 
+            }
+</script>
+
   <section>{{ site.title }} ©
   {% assign current = "now" | date: "%Y" | plus: 0%}
   {% unless site.footer.since and site.footer.since == current %}

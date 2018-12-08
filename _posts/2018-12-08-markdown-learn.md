@@ -74,7 +74,7 @@ tags: 开发者
 > - [ ] not ok
 > - [x] it's ok now
 
-##### double $ +  math language + double $
+##### `double \$ +  math language + double \$ `
 
 > $$
 > E=mc^2
