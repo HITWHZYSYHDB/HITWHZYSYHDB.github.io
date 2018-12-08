@@ -309,14 +309,14 @@ jQuery(document).ready(function($) {
                 }
                 weather.s = true;
                 weather.c = Array();
-                weather.c[0] = "现在是" + data.result[0].time ;
-                weather.c[1] = data.result[0].city + "今天" + data.result[0].temp + "°C";
-                weather.c[2] = data.result[0].city + "今天" + data.result[0].WD;
-                weather.c[3] = data.result[0].city + "今天" + data.result[0].temp + "，" + data.result[0].WD;
-                weather.c[4] = data.result[0].city + "明天" + "NO";
-                weather.c[5] = data.result[0].city + "明天" + "NO";
-                weather.c[6] = data.result[0].city + "后天" + "NO";
-                weather.c[7] = data.result[0].city + "后天" + "NO";
+                weather.c[0] = "现在是" + data.weatherinfo.time ;
+                weather.c[1] = data.weatherinfo.city + "今天" + data.weatherinfo.temp + "°C";
+                weather.c[2] = data.weatherinfo.city + "今天" + data.weatherinfo.WD;
+                weather.c[3] = data.weatherinfo.city + "今天" + data.weatherinfo.temp + "，" + data.weatherinfo.WD;
+                weather.c[4] = data.weatherinfo.city + "明天" + "NO";
+                weather.c[5] = data.weatherinfo.city + "明天" + "NO";
+                weather.c[6] = data.weatherinfo.city + "后天" + "NO";
+                weather.c[7] = data.weatherinfo.city + "后天" + "NO";
                 setCookie("wea_tstamp", weather.d, 1);
                 setCookie("weather", encodeURI(weather.c.join(",")), 1);
             },

@@ -2,8 +2,8 @@
 layout: post
 title: MathJax Test
 date: 2017-07-30
-categories: test
-tags: mathjax 
+categories: 开发者
+tags: 开发者 mathjax
 ---
 
 mathjax in markdown :)
