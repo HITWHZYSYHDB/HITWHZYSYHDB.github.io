@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 });
 
 jQuery(document).ready(function($) {
-    if (isindex) { //如果是主页
+    if (window.location.href=="https://hitwhzysyhdb.github.io") { //如果是主页
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
             showMessage(visitor + ' 你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
@@ -302,13 +302,14 @@ jQuery(document).ready(function($) {
     weather.ck = getCookie("weather");
     if (weather.ck == null || weather.d != getCookie("wea_tstamp")) {
         $.ajax({
-            dataType: "jsonp",
+            dataType: "json",
             success: function(data) {
                 if (data.success != 1) {
                     return;
                 }
                 weather.s = true;
                 weather.c = Array();
+				alert(data);
                 weather.c[0] = "现在是" + data.weatherinfo.time ;
                 weather.c[1] = data.weatherinfo.city + "今天" + data.weatherinfo.temp + "°C";
                 weather.c[2] = data.weatherinfo.city + "今天" + data.weatherinfo.WD;
@@ -317,6 +318,7 @@ jQuery(document).ready(function($) {
                 weather.c[5] = data.weatherinfo.city + "明天" + "NO";
                 weather.c[6] = data.weatherinfo.city + "后天" + "NO";
                 weather.c[7] = data.weatherinfo.city + "后天" + "NO";
+				alert(weather);
                 setCookie("wea_tstamp", weather.d, 1);
                 setCookie("weather", encodeURI(weather.c.join(",")), 1);
             },
