@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
 	alert(window.location.href);
-    if (isindex || window.location.href=="https://hitwhzysyhdb.github.io") { //如果是主页
+    if (window.location.href=="https://hitwhzysyhdb.github.io/") { //如果是主页
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
             showMessage(visitor + ' 你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
