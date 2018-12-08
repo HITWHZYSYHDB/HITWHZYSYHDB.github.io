@@ -1,3 +1,4 @@
+var visitor='阪本先生';
 jQuery(document).ready(function($) {
     $("#spig").mousedown(function(e) {
         if (e.which == 3) {
@@ -30,7 +31,8 @@ jQuery(document).ready(function($) {
 });
 
 jQuery(document).ready(function($) {
-    if (window.location.href=="https://hitwhzysyhdb.github.io") { //如果是主页
+	alert(window.location.href);
+    if (isindex || window.location.href=="https://hitwhzysyhdb.github.io") { //如果是主页
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
             showMessage(visitor + ' 你是夜猫子呀？还不睡觉，明天起的来么你？', 6000);
@@ -44,7 +46,7 @@ jQuery(document).ready(function($) {
             showMessage(visitor + ' 快来逗我玩吧！', 6000);
         }
     } else {
-        showMessage('欢迎' + visitor + '来到《若是凉夜已成梦》阅读 ' + title + ' ', 6000);
+        showMessage('欢迎' + visitor + '来到《若是凉夜已成梦》阅读 ' + page.title + ' ', 6000);
     }
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
@@ -116,7 +118,7 @@ jQuery(document).ready(function($) {
 jQuery(document).ready(function($) {
 
     window.setInterval(function() {
-        msgs = [$("#hitokoto").text(), weather.c[0], weather.c[2], weather.c[5], weather.c[7]];
+        msgs = [$("#hitokoto").text()];//, weather.c[0], weather.c[2], weather.c[5], weather.c[7]];
         var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i], 10000);
     },
@@ -211,7 +213,7 @@ jQuery(document).ready(function($) {
         if (!ismove) {
             stat_click++;
             if (stat_click <= 4) {
-                msgs = [weather.c[0], weather.c[2], weather.c[5], weather.c[7]];
+                msgs = ["我是东云博士嘿嘿~~","我来自《日常》呦~~","哎呀！你来了呢~~"]//weather.c[0], weather.c[2], weather.c[5], weather.c[7]];
             } else if (stat_click > 4) {
                 msgs = ["你有完没完呀？", "你已经摸我" + stat_click + "次了", "非礼呀！救命！OH，My ladygaga"];
                 var i = Math.floor(Math.random() * msgs.length);
@@ -294,6 +296,7 @@ function setCookie(name, value, days) {
     } else var expires = "";
     document.cookie = name + "=" + value + expires + "; path=/"
 }
+/*
 var weather = Array();
 weather.s = false;
 jQuery(document).ready(function($) {
@@ -329,4 +332,4 @@ jQuery(document).ready(function($) {
         weather.s = true;
         weather.c = decodeURI(weather.ck).split(",");
     }
-});
+});*/
